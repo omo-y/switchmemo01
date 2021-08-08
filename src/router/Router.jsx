@@ -1,0 +1,30 @@
+import { Component } from "react"
+import { BrowserRouter, Route, Switch, useParams } from "react-router-dom"
+import { Top } from "../components/pages/Top"
+import { Users } from "../components/pages/Users"
+import { DefaultLayout } from "../components/templates/DefaultLayout"
+import { HeaderOnly } from "../components/templates/HeaderOnly"
+
+export const Router=()=>{
+  return(
+    <BrowserRouter>
+    <Switch>
+    <Route exact path="/">
+      <DefaultLayout >
+        
+      <Top />
+    
+      </DefaultLayout>
+    </Route>
+    
+    <Route path="/Users">
+     <HeaderOnly>
+      <Users />
+      </HeaderOnly>
+      </Route>
+
+    </Switch>
+    
+    </BrowserRouter>
+  )
+}

@@ -1,2 +1,2 @@
-# switchmemo01
+# component01
 Created with CodeSandbox
